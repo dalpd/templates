@@ -5,11 +5,6 @@
 
     templates = {
 
-      trivial = {
-        path = ./trivial;
-        description = "A very basic flake";
-      };
-
       simpleContainer = {
         path = ./simple-container;
         description = "A NixOS container running apache-httpd";
@@ -45,14 +40,9 @@
         description = "A default.nix and shell.nix for backward compatibility with Nix installations that don't support flakes";
       };
 
-      haskell-hello = {
-        path = ./haskell-hello;
-        description = "A Hello World in Haskell with one dependency";
-      };
-
-      hercules-ci = {
-        path = ./hercules-ci;
-        description = "An example for Hercules-CI, containing only the necessary attributes for adding to your project.";
+      haskell = {
+        path = ./haskell;
+        description = "A Haskell flake project";
       };
 
       full = {
@@ -76,16 +66,6 @@
         path = ./go-hello;
         description = "A simple Go package";
       };
-
-      haskell-nix = {
-        path = ./haskell.nix;
-        description = "An haskell.nix template using hix";
-        welcomeText = ''
-          You just created an haskell.nix template using hix. Read more about it here:
-          https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
-        '';
-      };
-
     };
 
     defaultTemplate = self.templates.trivial;

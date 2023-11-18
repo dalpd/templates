@@ -1,0 +1,35 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-flake
+version:        0.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      HaskellFlakeLib
+  other-modules:
+      Paths_haskell_flake
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -O2 -fspecialise-aggressively
+  build-depends:
+      base
+    , relude
+  default-language: Haskell2010
+
+executable haskell-flake
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_flake
+  hs-source-dirs:
+      exec
+  ghc-options: -Wall -O2 -fspecialise-aggressively
+  build-depends:
+      base
+    , haskell-flake
+    , warp
+  default-language: Haskell2010
